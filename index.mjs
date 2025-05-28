@@ -1,15 +1,21 @@
 import dotenv from 'dotenv';
 dotenv.config();
-const axios = require('axios');
-const { IncomingWebhook } = require('@slack/webhook');
-const cron = require('node-cron');
+
+import axios from 'axios';
+import { IncomingWebhook } from '@slack/webhook';
+import cron from 'node-cron';
 
 const webhook = new IncomingWebhook(process.env.SLACK_WEBHOOK_URL);
 let lastAlertedIds = new Set();
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const seenFile = path.join(__dirname, 'seen.json');
 let seen = {};
 
