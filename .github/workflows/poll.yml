@@ -2,8 +2,8 @@ name: Poll OpenAI Status
 
 on:
   schedule:
-    - cron: "*/5 * * * *"  # every 5 minutes
-  workflow_dispatch:        # manual run support
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
 
 jobs:
   run-script:
