@@ -19,6 +19,7 @@ if (fs.existsSync(seenFile)) {
     console.error('Failed to parse seen.json:', e.message);
     seen = {};
   }
+}
 
 async function checkStatus() {
   try {
