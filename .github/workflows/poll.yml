@@ -34,11 +34,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Debug index.mjs contents
+        run: head -n 5 index.mjs
+
       - name: Run status script
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           TEST_MODE: "true"
         run: |
           echo "Installed modules:"
-          ls -la node_modules
+          echo "Running index.mjs"
           node index.mjs
