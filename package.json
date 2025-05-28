@@ -1,0 +1,26 @@
+{
+  "name": "openai-status-alerts",
+  "version": "1.0.0",
+  "description": "A lightweight prototype that monitors [status.openai.com](https://status.openai.com) and sends Slack alerts filtered by product/service (e.g., ChatGPT, API, GPT-4o).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamgroth/openai-status-alerts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamgroth/openai-status-alerts/issues"
+  },
+  "homepage": "https://github.com/adamgroth/openai-status-alerts#readme",
+  "dependencies": {
+    "@slack/webhook": "^7.0.5",
+    "axios": "^1.9.0",
+    "dotenv": "^16.5.0",
+    "node-cron": "^4.0.7"
+  }
+}
