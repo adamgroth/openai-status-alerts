@@ -1,4 +1,5 @@
-require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
 const axios = require('axios');
 const { IncomingWebhook } = require('@slack/webhook');
 const cron = require('node-cron');

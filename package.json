@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "openai-status-alerts",
   "version": "1.0.0",
   "description": "A lightweight prototype that monitors [status.openai.com](https://status.openai.com) and sends Slack alerts filtered by product/service (e.g., ChatGPT, API, GPT-4o).",
@@ -20,7 +21,7 @@
   "dependencies": {
     "@slack/webhook": "^7.0.5",
     "axios": "^1.9.0",
-    "dotenv": "16.5.0",
+    "dotenv": "^16.0.0",
     "node-cron": "^4.0.7"
   }
 }
