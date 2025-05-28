@@ -14,7 +14,7 @@ jobs:
 
       - name: Debug working directory
         run: |
-          pwd
+          echo "PWD: $(pwd)"
           ls -la
 
       - name: Set up Node.js
