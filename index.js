@@ -1,4 +1,4 @@
-import dotenv from 'dotenv';
+const dotenv = require('dotenv');
 dotenv.config();
 const axios = require('axios');
 const { IncomingWebhook } = require('@slack/webhook');
