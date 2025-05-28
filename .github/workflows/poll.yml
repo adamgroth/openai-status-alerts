@@ -1,5 +1,10 @@
 name: Poll OpenAI Status
 
+defaults:
+  run:
+    shell: bash
+    working-directory: .
+
 on:
   schedule:
     - cron: "*/5 * * * *"
