@@ -28,5 +28,5 @@ jobs:
       - name: Run status script
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          TEST_MODE: "true"
+          TEST_MODE: "false"
         run: node index.js
