@@ -1,9 +1,9 @@
-import dotenv from 'dotenv';
-dotenv.config();
+// Environment variables are provided directly in GitHub Actions.
 
 import axios from 'axios';
 import { IncomingWebhook } from '@slack/webhook';
-import cron from 'node-cron';
+// Removed cron usage to allow the script to exit after one run in GitHub Actions
+// import cron from 'node-cron';
 
 const webhook = new IncomingWebhook(process.env.SLACK_WEBHOOK_URL);
 let lastAlertedIds = new Set();
@@ -53,5 +53,4 @@ async function checkStatus() {
   }
 }
 
-cron.schedule('*/5 * * * *', checkStatus);
 checkStatus();
